@@ -1,0 +1,25 @@
+.carousel-cell {
+    width: 100%; /* full width */
+    height: 70vh; /* height of carousel */
+    min-height: 250px;
+    margin-right: 10px;
+  }
+
+  .flickity-button {
+    background: transparent;
+  }
+
+  .flickity-prev-next-button {
+    width: 80px;
+    height: 80px;
+  }
+
+  .flickity-button-icon {
+    fill: #000;
+  }
+
+  .progress-bar {
+    height: 20px;
+    width: 0;
+    background: #333;
+  }
