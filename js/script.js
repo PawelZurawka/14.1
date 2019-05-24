@@ -7,10 +7,10 @@ var slideList = '';
 
 for(var i = 0; i < mySlides.length; i++){
   slideList += Mustache.render(slides, mySlides[i]);
-};
+}
 
 results.insertAdjacentHTML('beforeend', slideList);
-}) ();
+})();
 
 //FLICKITY
 var elem = document.querySelector('.main-carousel');
