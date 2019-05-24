@@ -6,15 +6,7 @@
 
 .restartButton:hover { color: indianred; }
 
-.carousel-cell-1 { background-image: url(../images/1.jpg); background-size: cover; }
-
-.carousel-cell-2 { background-image: url(../images/2.jpg); background-size: cover; }
-
-.carousel-cell-3 { background-image: url(../images/3.jpg); background-size: cover; }
-
-.carousel-cell-4 { background-image: url(../images/4.jpg); background-size: cover; }
-
-.carousel-cell-5 { background-image: url(../images/5.jpg); background-size: cover; }
+h1 { color: #fff; text-align: center; font-family: 'Dancing Script', cursive; }
 
 @media (max-width: 767px) { .description { font-size: 28px; }
   .restartButton { font-size: 15px; }

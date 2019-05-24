@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>14</title>
+    <title>14 Mustache</title>
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="vendor/flickity.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -14,26 +14,56 @@
     <div class="button-group">
         <button class="restartButton">Back to first slide</button>
     </div>
-    <div class="main-carousel">
-        <div class="carousel-cell carousel-cell-1" id="carousel-cell1">
-            <div class="container"><p class="description">First slide</p></div>
-        </div>
-        <div class="carousel-cell carousel-cell-2" id="carousel-cell2">
-            <div class="container"><p class="description">Second slide</p></div>
-        </div>
-        <div class="carousel-cell carousel-cell-3" id="carousel-cell3">
-            <div class="container"><p class="description">Third slide</p></div>
-        </div>
-        <div class="carousel-cell carousel-cell-4" id="carousel-cell4">
-            <div class="container"><p class="description">Fourth slide</p></div>
-        </div>
-        <div class="carousel-cell carousel-cell-5" id="carousel-cell5">
-            <div class="container"><p class="description">Fifth slide</p></div>
-        </div>
+    <div class="main-carousel" id="results">
     </div>
     <div class="progress-bar"></div>
+
+    <script id="template-carousel-slides" type="x-tmpl-mustache">
+        <div class="carousel-cell carousel-cell-{{ number }}" id="carousel-cell{{ number }}" style="background-image:url({{ image }}); background-size: cover;">
+          <div class="container">
+            <h1>{{ title }}</h1>
+              {{{ description }}}
+          </div>
+        </div>
+    </script>
+    <script>
+      var mySlides = [
+        {
+          number: '1',
+          image: '../images/1.jpg',
+          title: 'Lighthouse',
+          description: '<p class="description">Greece</p>'
+        },
+        {
+          number: '2',
+          image: '../images/2.jpg',
+          title: 'Lake',
+          description: '<p class="description">Canada</p>'
+        },
+        {
+          number: '3',
+          image: '../images/3.jpg',
+          title: 'Thunders',
+          description: '<p class="description">Poland<p>'
+        },
+        {
+          number: '4',
+          image: '../images/4.jpg',
+          title: 'Sunset',
+          description: '<p class="description">Hawaii</p>'
+        },
+        {
+          number: '5',
+          image: '../images/5.jpg',
+          title: 'Beach',
+          description: '<p class="description">Thailand</p>'
+        }
+      ];
+    </script> 
+    
   <script src="vendor/flickity.pkgd.min.js"></script>  
   <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
+  <script src="/vendor/mustache.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,3 +1,18 @@
+//MUSTACHE
+(function() {
+var slides = document.getElementById('template-carousel-slides').innerHTML;
+Mustache.parse(slides);
+
+var slideList = '';
+
+for(var i = 0; i < mySlides.length; i++){
+  slideList += Mustache.render(slides, mySlides[i]);
+};
+
+results.insertAdjacentHTML('beforeend', slideList);
+}) ();
+
+//FLICKITY
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
   // options
