@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>14 Mustache</title>
+    <title>14 Google Maps</title>
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="vendor/flickity.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="button-group">
-        <button class="restartButton">Back to first slide</button>
+    <div class="wrapper">
+        <div class="button-group">
+            <button class="restartButton">Back to first slide</button>
+        </div>
+        <div id="results" class="main-carousel">
+        </div>
+        <div class="progress-bar"></div>
     </div>
-    <div class="main-carousel" id="results">
-    </div>
-    <div class="progress-bar"></div>
-
+    <div id="map"></div>
     <script id="template-carousel-slides" type="text/x-tmpl-mustache">
         <div class="carousel-cell carousel-cell-{{ number }}" id="carousel-cell{{ number }}" style="background-image:url({{ image }}); background-size: cover;">
           <div class="container">
@@ -32,31 +34,36 @@
           number: '1',
           image: './images/1.jpg',
           title: 'Lighthouse',
-          description: '<p class="description">Greece</p>'
+          description: '<p class="description">Greece</p>',
+          coords: {lat: 35.370566, lng: 24.477572}
         },
         {
           number: '2',
           image: './images/2.jpg',
           title: 'Lake',
-          description: '<p class="description">Canada</p>'
+          description: '<p class="description">Canada</p>',
+          coords: {lat: 57.379751, lng: -102.617303}
         },
         {
           number: '3',
           image: './images/3.jpg',
           title: 'Thunders',
-          description: '<p class="description">Poland<p>'
+          description: '<p class="description">Poland<p>',
+          coords: {lat: 51.108900, lng: 17.036799}
         },
         {
           number: '4',
           image: './images/4.jpg',
           title: 'Sunset',
-          description: '<p class="description">Hawaii</p>'
+          description: '<p class="description">Hawaii</p>',
+          coords: {lat: 21.307231, lng: -157.856069}
         },
         {
           number: '5',
           image: './images/5.jpg',
           title: 'Beach',
-          description: '<p class="description">Thailand</p>'
+          description: '<p class="description">Thailand</p>',
+          coords: {lat: 8.101349, lng: 98.807369}
         }
       ];
     </script> 
@@ -65,5 +72,6 @@
   <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
   <script src="vendor/mustache.js"></script>
   <script src="js/script.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvzX45I4hIPpvBs59abVr2Zc2jJYV1PoM&callback=initMap"></script>
 </body>
 </html>

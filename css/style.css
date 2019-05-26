@@ -1,5 +1,7 @@
 .container { width: 1200px; margin: 0 auto; }
 
+.wrapper { background-color: indianred; }
+
 .description { font-family: 'Dancing Script', cursive; position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%); color: #FFF; padding: 10px 20px; font-size: 36px; background-color: rgba(90, 0, 0, 0.3); border-radius: 10px; text-align: center; }
 
 .restartButton { position: absolute; z-index: 1; background-color: rgba(90, 0, 0, 0.3); color: #FFF; margin-left: 20px; margin-top: 20px; border: none; outline: none; font-family: 'Dancing Script', cursive; font-size: 20px; padding: 5px 10px; border-radius: 10px; cursor: pointer; transition: 0.3s; }
@@ -12,7 +14,9 @@ h1 { color: #fff; text-align: center; font-family: 'Dancing Script', cursive; }
   .restartButton { font-size: 15px; }
   .restartButton:hover { color: #FFF; } }
 
-.carousel-cell { width: 100%; /* full width */ height: 70vh; /* height of carousel */ min-height: 250px; margin-right: 10px; }
+.carousel-cell { width: 100%; /* full width */ height: 100%; /* height of carousel */ min-height: 250px; margin-right: 10px; }
+
+.flickity-viewport { height: calc(50vh - 20px); }
 
 .flickity-prev-next-button { width: 80px; height: 80px; }
 
@@ -21,3 +25,5 @@ h1 { color: #fff; text-align: center; font-family: 'Dancing Script', cursive; }
 .progress-bar { height: 20px; width: 0; background: #333; }
 
 @media (max-width: 767px) { .flickity-prev-next-button { width: 40px; height: 40px; } }
+
+#map { width: 100%; height: 50vh; background-color: grey; }

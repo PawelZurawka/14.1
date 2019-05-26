@@ -1,8 +1,12 @@
 .carousel-cell {
     width: 100%; /* full width */
-    height: 70vh; /* height of carousel */
+    height: 100%; /* height of carousel */
     min-height: 250px;
     margin-right: 10px;
+  }
+
+  .flickity-viewport {
+    height: calc(50vh - 20px);	
   }
 
   .flickity-prev-next-button {
@@ -26,4 +30,6 @@
       height: 40px
     }
   }
+  
+  
 
