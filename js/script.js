@@ -23,12 +23,6 @@ var flkty = new Flickity( elem, {
   pageDots: false,
 });
 
-// element argument can be a selector string
-//   for an individual element
-var flkty = new Flickity( '.main-carousel', {
-  // options
-});
-
 //FUNCTION "BACK TO FIRST SLIDE"
 var firstSlide = document.querySelector('.restartButton');
 firstSlide.addEventListener('click', function () {
