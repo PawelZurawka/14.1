@@ -62,44 +62,4 @@ flkty.on( 'scroll', function( progress ) {
       });
     }
   };
-
-
-
-
-
-
-/*
-//GOOGLE MAPS
-(function(){ 
-	
-	// Definujemy funkcję initMap w zakresie globalnym (czyli jako właściwość obiektu window).
-  window.initMap = function() {
-		
-		// Zapisujemy w zmiennej obiekt zawierający współrzędne geograficzne.
-		//var uluru = {lat: 35.370566, lng: 24.477572};
-		
-		// W zmiennej map zapisujemy nową instancję obiektu Map. 
-		var map = new google.maps.Map(document.getElementById('map'), {
-			// Podajemy opcje mapy, np. zoom i punkt wycentrowania mapy.
-			zoom: 4,
-			center: mySlides[0].coords
-		});
-		//ADD MARKERS TO MAP
-		var markers = [];
-		for(var i = 0; i < mySlides.length; i++) {
-			markers.push = (new google.maps.Marker ({
-			position: mySlides[i].coords,
-			map: map,
-			id: i
-			}));
-			markers[i].addListener('click', function() {
-				flkty.select(this.id);
-			});
-			// Change map position after slide change
-      flkty.on("change", function(index) {
-        map.panTo(slideData[index].coords);
-        map.setZoom(12);
-			});
-		}
-	};	*/ 
 })();  
